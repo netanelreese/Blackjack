@@ -8,7 +8,7 @@ using namespace std;
 int bank;
 
 void title();
-void lowercase(string input);
+string lowercase(string input);
 void prompt();
 void blackjack();
 char keepPlaying();
@@ -47,18 +47,29 @@ void prompt() {
     cout << "Start     Settings" << endl;
 
     getline(cin, choice);
-    lowercase(choice);
+    cout << choice << endl;
+    choice = lowercase(choice);
+    cout << choice << endl;
     if (choice == "settings") {
-        cout << choice << endl;
+        cout << "poggers" << endl;
     }
     else if (choice == "start"){
         cout << "Game on B^)" << endl;
     }
-}
-void lowercase(string input) {
-    for (int i = 0; i < input.length(); ++i) {
-        input.at(i) = tolower(input.at(i));
+    else {
+        cout << "Invalid Input." << endl;
     }
+}
+string lowercase(string input) {
+    string lower = input;
+    int i = 0;
+    char c;
+    while(lower[i]) {
+        c = lower[i];
+        lower[i] = tolower(c);
+        i++;
+    }
+    return lower;
 }
 char keepPlaying() {
     char choice = 's';
