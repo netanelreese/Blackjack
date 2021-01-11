@@ -5,7 +5,7 @@
 
 using namespace std;
 
-void start();
+void title();
 void blackjack();
 char keepPlaying();
 void goodbye();
@@ -21,8 +21,8 @@ int main() {
     //keepPlaying();
     return 0;
 }
-void start() {
-    cout << "00000000   0          000000    000000   0      0  0        000000    000000   0      0" << endl;
+void title() {
+    cout << "00000000   0          000000    000000   0      0  0           000000    000000   0      0" << endl;
     cout << "0       0  0         0      0  0      0  0      0  0          0      0  0      0  0      0" << endl;
     cout << "0       0  0         0      0  0      0  0      0  0          0      0  0      0  0      0" << endl;
     cout << "0       0  0         0      0  0         0     0   0          0      0  0         0     0 " << endl;
@@ -31,6 +31,8 @@ void start() {
     cout << "0       0  0         0      0  0      0  0      0  0       0  0      0  0      0  0      0" << endl;
     cout << "0       0  0         0      0  0      0  0      0  0       0  0      0  0      0  0      0" << endl;
     cout << "00000000   00000000  0      0   000000   0      0   0000000   0      0   000000   0      0" << endl;
+    //title screen with author
+    cout << "\nProgrammed by: Nathanael Reese" << endl;
 
 }
 char keepPlaying() {
