@@ -43,16 +43,17 @@ void title() {
 void prompt() {
     string choice;
     cout << "Enter your choice:" << endl;
-    cout << "Start     Settings\n" << endl;
+    cout << "Start     Settings" << endl;
 
     getline(cin, choice); //retrieving input from user
     choice = lowercase(choice); //converting input to lowercase
+    cout << "\n" << endl;
 
     if (choice == "settings") { //settings route
         cout << "poggers" << endl;
     }
     else if (choice == "start"){ //start game rout
-        cout << "Game on (⌐▨_▨)" << endl;
+        cout << "Game on B^)" << endl;
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
