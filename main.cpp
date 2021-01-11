@@ -81,9 +81,27 @@ void goodbye() {
     int miliseconds = 3000; //3 seconds in miliseconds
     cout << "Thank you, goodbye :)" << endl;
     cout << "3";
-    Sleep(1000); //shows the end card for three seconds before closing;
+    Sleep(250); //shows the end card for three seconds before closing;
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
     cout << "2";
-    Sleep(1000);
+    Sleep(250); //shows the end card for three seconds before closing;
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
     cout << "1";
-    Sleep(1000);
+    Sleep(250); //shows the end card for three seconds before closing;
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
+    cout << ".";
+    Sleep(250);
 }
