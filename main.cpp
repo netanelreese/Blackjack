@@ -1,7 +1,11 @@
+/*
+ * Author: Nathanael Reese
+ * Version: 0.1
+ */
 #include <iostream>
-#include <cmath>
 #include <string>
 #include <windows.h>
+
 
 using namespace std;
 
