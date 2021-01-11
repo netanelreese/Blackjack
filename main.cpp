@@ -9,7 +9,7 @@ int bank;
 
 void title();
 string lowercase(string input);
-void prompt();
+int prompt();
 void blackjack();
 char keepPlaying();
 void goodbye();
@@ -19,11 +19,18 @@ enum Card : int {TWO = 2, THREE = 3, FOUR = 4, FIVE = 5, SIX = 6, SEVEN = 7
 
 
 int main() {
+    int promptResult;
+
     title(); //calling title function
-    prompt(); // calling prompt function for asking what the user wants to do
-    goodbye(); // calling goodbye function
-    //blackjack();
+    promptResult = prompt(); // calling prompt function for asking what the user wants to do
+    if (promptResult = 1) {
+        //settings();
+    }
+    else if (promptResult = 0) {
+        //blackjack();
+    }
     //keepPlaying();
+    goodbye(); // calling goodbye function
     return 0;
 }
 void title() {
@@ -40,7 +47,7 @@ void title() {
     cout << "\nProgrammed by: Nathanael Reese" << endl;
 
 }
-void prompt() {
+int prompt() {
     string choice;
     cout << "Enter your choice:" << endl;
     cout << "Start     Settings" << endl;
@@ -51,9 +58,11 @@ void prompt() {
 
     if (choice == "settings") { //settings route
         cout << "poggers" << endl;
+        return 1;
     }
     else if (choice == "start"){ //start game rout
         cout << "Game on B^)" << endl;
+        return 0;
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
