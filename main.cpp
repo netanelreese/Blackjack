@@ -78,30 +78,30 @@ char keepPlaying() {
     }
 }
 void goodbye() {
-    int miliseconds = 3000; //3 seconds in miliseconds
+    int countdown = 250; //3 seconds in miliseconds
     cout << "Thank you, goodbye :)" << endl;
     cout << "3";
-    Sleep(250); //shows the end card for three seconds before closing;
+    Sleep(countdown); //shows the end card for three seconds before closing;
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << "2";
-    Sleep(250); //shows the end card for three seconds before closing;
+    Sleep(countdown); //shows the end card for three seconds before closing;
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << "1";
-    Sleep(250); //shows the end card for three seconds before closing;
+    Sleep(countdown); //shows the end card for three seconds before closing;
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
     cout << ".";
-    Sleep(250);
+    Sleep(countdown);
 }
