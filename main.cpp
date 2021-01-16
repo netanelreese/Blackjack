@@ -49,7 +49,7 @@ void title() {
 int prompt() {
     string choice;
     cout << "Enter your choice:" << endl;
-    cout << "Start     Settings" << endl;
+    cout << "Start     Settings     Exit" << endl;
 
     getline(cin, choice); //retrieving input from user
     choice = lowercase(choice); //converting input to lowercase
@@ -62,6 +62,9 @@ int prompt() {
     else if (choice == "start"){ //start game rout
         blackjack();
         return 0;
+    }
+    else if (choice == "exit") {
+        goodbye();
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
