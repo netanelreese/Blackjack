@@ -161,13 +161,11 @@ int startMenu() {
         startMenu();
     }
 }
-void settings() {
-    string choice = "";
+void settings() { //FIXME : When through with the bank function the program goes through and doesnt take any input
+    string choice;
 
-    cout << "Choice is" << endl;
-    
     cout << "Bank size is: $" << bank << endl; //showing the current bank size
-    cout << "What setting do you want to change (type bank or exit to leave settings)" << endl; //prompting user for choice
+    cout << "What setting do you want to change: (type bank or exit to leave settings)" << endl; //prompting user for choice
     getline(cin, choice); // retrieving input
     choice = lowercase(choice); //converting input to lowercase
 
