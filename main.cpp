@@ -23,6 +23,13 @@ void goodbye();
 enum Card : int {TWO = 2, THREE = 3, FOUR = 4, FIVE = 5, SIX = 6, SEVEN = 7
                     , EIGHT = 8, NINE = 9, TEN = 10, J = 10, Q = 10, K = 10, A};
 
+class Hand {
+    string hand;
+
+    Hand() {
+
+    }
+};
 
 int main() {
     int promptResult;
@@ -90,6 +97,14 @@ void settings() {
 
 }
 void blackjack() {
+    string inputBet;
+    int betAmount;
+
+    cout << "Enter bet amount: " << endl;
+    getline(cin, inputBet);
+
+    cout << "Bet amount is: $" << betAmount << "\n" << endl;
+
 
 }
 string lowercase(string input) {
