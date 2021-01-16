@@ -154,7 +154,7 @@ int startMenu() {
         return 0;
     }
     else if (choice == "exit") {
-        //leaving the prompt menu
+        //leaving the start menu
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
@@ -184,15 +184,14 @@ void settings() { //FIXME : When through with the bank function the program goes
 
 }
 void blackjack() {
-    string inputBet;
     int betAmount;
 
     cout << "Enter bet amount: " << endl;
-    getline(cin, inputBet);
+    cin >> betAmount;
 
     cout << "Bet amount is: $" << betAmount << "\n" << endl;
 
-
+    keepPlaying();
 }
 string lowercase(string input) {
     string lower = input;
