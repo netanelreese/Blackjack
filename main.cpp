@@ -9,7 +9,8 @@
 
 using namespace std;
 
-int bank;
+int bank = 100;
+int softNum = 17;
 
 void title();
 string lowercase(string input);
@@ -55,17 +56,37 @@ int prompt() {
     cout << "\n" << endl;
 
     if (choice == "settings") { //settings route
-        cout << "poggers" << endl;
+        settings();
         return 1;
     }
     else if (choice == "start"){ //start game rout
-        cout << "Game on B^)" << endl;
+        blackjack();
         return 0;
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
         prompt();
     }
+}
+void settings() {
+    string choice;
+
+    cout << "Bank size is: $" << bank << endl;
+    cout << "What setting do you want to change (type bank or exit to leave settings)" << endl;
+    getline(cin, choice);
+
+    if (choice == "bank") {
+        cout << "Enter bank amount: " << endl;
+        cin >> bank;
+        settings();
+    }
+    else if (choice == "exit") {
+        prompt(); //exits settings menu and goes back to prompt menu to start game
+    }
+
+}
+void blackjack() {
+
 }
 string lowercase(string input) {
     string lower = input;
