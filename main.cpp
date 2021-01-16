@@ -31,9 +31,14 @@ class Hand {
     int max = 10;
     int min = 0;
 
+public:
     Hand() {
         drawCard();//drawing two cards for initial hand
         drawCard();
+    }
+
+    string getHand() {
+        return hand;
     }
     void draw() {
         cardNum = rand() % max + min;
@@ -106,9 +111,7 @@ class Hand {
             draw();
         }
     }
-    string getHand() {
-        return hand;
-    }
+
     int getTotal() {
         return total;
     }
@@ -185,14 +188,36 @@ void settings() { //FIXME : When through with the bank function the program goes
 }
 void blackjack() {
     int betAmount;
+    Hand dealer;
+    Hand player;
+    char playChoice = 'y';
+    string gameChoice;
 
-    cout << "Enter bet amount: " << endl;
-    cin >> betAmount;
+    while(playChoice == 'y') {
+        cout << "Enter bet amount: " << endl;
+        cin >> betAmount;
 
-    cout << "Bet amount is: $" << betAmount << "\n" << endl;
+        cout << "Bank is: $" << bank << endl;
+        cout << "Bet amount is: $" << betAmount << "\n" << endl;
 
-    keepPlaying();
+        cout << "Hand is: " << player.getHand() << endl;
+        cout << "Total is: " << player.getTotal() << "\n" << endl;
+
+        cout << "Hit, Stand or Double" << endl;
+        getline(cin, gameChoice);
+        gameChoice = lowercase(gameChoice);
+
+        if (gameChoice == "hit") {
+            player.draw();
+        }
+        else if (gameChoice == "stand") {
+
+        }
+
+        playChoice = keepPlaying();
+    }
 }
+
 string lowercase(string input) {
     string lower = input;
     int i = 0;
