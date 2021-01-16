@@ -14,6 +14,7 @@ int bank;
 void title();
 string lowercase(string input);
 int prompt();
+void settings();
 void blackjack();
 char keepPlaying();
 void goodbye();
@@ -26,14 +27,7 @@ int main() {
     int promptResult;
 
     title(); //calling title function
-    promptResult = prompt(); // calling prompt function for asking what the user wants to do
-    if (promptResult = 1) {
-        //settings();
-    }
-    else if (promptResult = 0) {
-        //blackjack();
-    }
-    //keepPlaying();
+    prompt(); // calling prompt function for asking what the user wants to do
     goodbye(); // calling goodbye function
     return 0;
 }
