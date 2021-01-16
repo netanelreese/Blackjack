@@ -196,6 +196,7 @@ void blackjack() {
     while(playChoice == 'y') {
         cout << "Enter bet amount: " << endl;
         cin >> betAmount;
+        bank -= betAmount;
 
         cout << "Bank is: $" << bank << endl;
         cout << "Bet amount is: $" << betAmount << "\n" << endl;
