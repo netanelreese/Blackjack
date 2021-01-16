@@ -14,7 +14,7 @@ int softNum = 17;
 
 void title();
 string lowercase(string input);
-int prompt();
+int startMenu();
 void settings();
 void blackjack();
 char keepPlaying();
@@ -118,7 +118,7 @@ int main() {
     int promptResult;
 
     title(); //calling title function
-    prompt(); // calling prompt function for asking what the user wants to do
+    startMenu(); // calling prompt function for asking what the user wants to do
     goodbye(); // calling goodbye function
     return 0;
 }
@@ -136,7 +136,7 @@ void title() {
     cout << "\nProgrammed by: Nathanael Reese" << endl;
 
 }
-int prompt() {
+int startMenu() {
     string choice;
     cout << "Enter your choice:" << endl;
     cout << "Start     Settings     Exit" << endl;
@@ -158,12 +158,14 @@ int prompt() {
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
-        prompt();
+        startMenu();
     }
 }
 void settings() {
     string choice = "";
 
+    cout << "Choice is" << endl;
+    
     cout << "Bank size is: $" << bank << endl; //showing the current bank size
     cout << "What setting do you want to change (type bank or exit to leave settings)" << endl; //prompting user for choice
     getline(cin, choice); // retrieving input
@@ -175,7 +177,7 @@ void settings() {
         settings();
     }
     else if (choice == "exit") {
-        prompt(); //exits settings menu and goes back to prompt menu to start game
+        startMenu(); //exits settings menu and goes back to prompt menu to start game
     }
     else {
         cout << "Invalid input." << endl;
