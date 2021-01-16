@@ -64,7 +64,7 @@ int prompt() {
         return 0;
     }
     else if (choice == "exit") {
-        goodbye();
+        //leaving the prompt menu
     }
     else { //invalid input, recursively calls function until valid input is entered
         cout << "Invalid Input." << endl;
@@ -72,11 +72,12 @@ int prompt() {
     }
 }
 void settings() {
-    string choice;
+    string choice = "";
 
-    cout << "Bank size is: $" << bank << endl;
-    cout << "What setting do you want to change (type bank or exit to leave settings)" << endl;
-    getline(cin, choice);
+    cout << "Bank size is: $" << bank << endl; //showing the current bank size
+    cout << "What setting do you want to change (type bank or exit to leave settings)" << endl; //prompting user for choice
+    getline(cin, choice); // retrieving input
+    choice = lowercase(choice); //converting input to lowercase
 
     if (choice == "bank") {
         cout << "Enter bank amount: " << endl;
