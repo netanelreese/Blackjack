@@ -177,6 +177,10 @@ void settings() {
     else if (choice == "exit") {
         prompt(); //exits settings menu and goes back to prompt menu to start game
     }
+    else {
+        cout << "Invalid input." << endl;
+        settings();
+    }
 
 }
 void blackjack() {
