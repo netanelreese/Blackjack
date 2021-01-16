@@ -25,9 +25,92 @@ enum Card : int {TWO = 2, THREE = 3, FOUR = 4, FIVE = 5, SIX = 6, SEVEN = 7
 
 class Hand {
     string hand;
+    int cardNum;
+    int numCards;
+    int total;
+    int max = 10;
+    int min = 0;
 
     Hand() {
+        drawCard();//drawing two cards for initial hand
+        drawCard();
+    }
+    void draw() {
+        cardNum = rand() % max + min;
+        numCards++;
 
+        switch(cardNum) { //switch statement to generate random number and add the respective card to the hand
+            case 0:
+                hand.append("A");
+                total += 11;
+                if (total > 21) {
+                    total -= 10;
+                }
+                break;
+            case 1:
+                hand.append("2");
+                total += 2;
+                break;
+            case 2:
+                hand.append("3");
+                total += 3;
+                break;
+            case 3:
+                hand.append("4");
+                total += 4;
+                break;
+            case 4:
+                hand.append("5");
+                total += 5;
+                break;
+            case 5:
+                hand.append("6");
+                total += 6;
+                break;
+            case 6:
+                hand.append("7");
+                total += 7;
+                break;
+            case 7:
+                hand.append("8");
+                total += 8;
+                break;
+            case 8:
+                hand.append("9");
+                total += 9;
+                break;
+            case 9:
+                hand.append("10");
+                total += 10;
+                break;
+            case 10:
+                hand.append("J");
+                total += 10;
+                break;
+            case 11:
+                hand.append("Q");
+                total += 10;
+                break;
+            case 12:
+                hand.append("K");
+                total += 10;
+                break;
+        }
+    }
+    void drawCard() {
+        if (numCards == 1) {
+            draw();
+        }
+        else {
+            hand.append(", ");
+            draw();
+        }
+    }
+    string getHand() {
+        return hand;
+    }
+    int getTotal() {
+        return total;
     }
 };
 
